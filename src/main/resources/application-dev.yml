@@ -1,0 +1,18 @@
+logging.level:
+  org.springframework.scheduling.quartz: WARN
+
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-connections: 5000
+  port: 8081
+
+spring:
+  jpa:
+    database: mysql
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/game_server_java?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: 123456
