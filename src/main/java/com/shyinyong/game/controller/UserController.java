@@ -1,22 +1,21 @@
 package com.shyinyong.game.controller;
 
 import com.shyinyong.game.service.GameService;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/game")
 @RestController
-public class GameController {
+@RequestMapping("/user")
+public class UserController {
 
     private final GameService gameService;
 
-    public GameController(GameService gameService) {
+    public UserController(GameService gameService) {
         this.gameService = gameService;
     }
 
-    @RequestMapping("/enter")
-    public String enter() {
-        return gameService.welcome();
+    @RequestMapping("/me")
+    public String welcome() {
+        return gameService.me();
     }
 }
